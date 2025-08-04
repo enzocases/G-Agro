@@ -1,0 +1,274 @@
+.calendarWrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.calendarContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+    position: relative;
+}
+
+.monthSelector,
+.yearSelector {
+    cursor: pointer;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    border: 1px solid transparent; 
+}
+
+.monthSelector:hover,
+.yearSelector:hover {
+    background-color: #ddd; 
+    border-color: #ccc; 
+}
+
+.dropdownIcon {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    
+}
+
+.isOpen .dropdownIcon {
+    transform: rotate(-90deg);
+}
+
+.calendarGrid {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 2px;
+}
+
+.calendarDay {
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.calendarDay.empty {
+    visibility: hidden; 
+}
+
+.event {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.dayNumber {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.calendarWeekday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+.calendarDay.emptyEnd {
+    display: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25vw;
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateBtn, .addEventBtn {
+    padding: 10px;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.updateBtn {
+    background-color: #4caf50;
+}
+
+.addEventBtn {
+    background-color: #2196f3;
+}
+
+.daysOfWeek {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendarDay:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.04);
+}
+
+.selectedDay {
+    background-color: #90caf9 !important; 
+    transform: scale(1.04); 
+}
+
+.empty,
+.emptyEnd {
+    background-color: transparent;
+    cursor: default;
+}
+
+.addBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addBtn:hover {
+    background-color: #45a049;
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+    color: #FAFAFA;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    transition: 0.5s;
+}
+
+.input::placeholder {
+    color: #ccc;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #99cd85;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hidden {
+    display: none;
+    transition: ease-in-out;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 8px;
+    top: 0;
+    width: max-content;
+    height: min-content;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: min-content;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    height: 10rem;
+    z-index: 10;
+    margin-top: 8px;
+    overflow-y: scroll;
+}
+
+.dropdownItem {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdownItem:hover {
+    background-color: #f0f0f0;
+}
+
+.icon{
+    font-size: 12px;
+    font-weight: bolder;
+    margin-left: 7px;
+    margin-bottom: 2px;
+    
+}
+.isOpen{
+    transition: 0.5s;
+    transform: rotate(90deg);
+}
+
+.select{
+    background-color: #2c2c2c !important;
+    margin-bottom: 0.8rem;
+    color: #fff !important; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.option{
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+    
+}

@@ -1,0 +1,433 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+/* Cabeçalho  ///////////////////////*/
+
+.cabecalhoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2d2d2d;
+  gap: 60px;
+}
+
+.cardCabecalho {
+  background-color: #2d2d2d;
+  color: #fff;
+  width: 50%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 4px, rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.titulo {
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.cardCabecalho p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/*  Menu  ///////////////////////*/
+
+.menu {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+  align-items: center;
+}
+
+.menuEsquerda {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around !important;
+gap: 20px;
+padding: 0 20px;
+  border-right: 2px solid #444;
+}
+
+.menuDireita {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+.menuItem {
+  position: relative;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transition: 0.4s ease;
+  justify-content: center;
+  width: 70%;
+  text-align: center;
+}
+
+.menuItem:hover {
+  border: 1px solid rgba(76, 175, 80, 0.7);
+  color: #4caf50;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.4s ease;
+}
+
+.menuItem:hover a {
+  color: #99cd85;
+  transition: 0.4s ease;
+}
+
+.btnPesquisar {
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menuItem a {
+  color: white;
+  text-decoration: none;
+}
+
+/*Dropdown Menu Filtrar ///////////////*/
+
+.filtrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s ease-out;
+  position: relative;
+}
+
+.filtrar:hover {
+  background-color: #99cd85;
+  transition: 0.3s ease-in;
+}
+
+.iconeFiltrar {
+  margin-right: 10px;
+}
+
+.dropdownFiltrar {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdownFiltrar.show {
+  display: block;
+}
+
+.dropdownFiltrar label {
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.inputFiltrar {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  transition: 0.5s;
+}
+
+.inputFiltrar::placeholder {
+  color: #ccc;
+}
+
+.inputFiltrar:focus {
+  outline: none;
+  border-color: #99cd85;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btnFiltrarAplicar {
+  width: 100%;
+  padding: 8px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnFiltrarAplicar:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.inputPesquisa {
+  border-radius: 5px 0 0 5px;
+  height: 45px;
+}
+
+.divInputPesquisa {
+  margin: 0;
+}
+
+.divBtnPesquisa {
+  margin: 0;
+}
+
+.btnPesquisar {
+  background-color: #28a745;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  max-height: auto;
+  align-items: center;
+  height: 45px;
+  transition: 0.3s ease-out;
+}
+
+.btnPesquisar:hover {
+  background-color: #99cd85;
+  transition: 0.3s ease-in;
+}
+
+
+/* Platios  ///////////////////////*/
+
+.areaPlantios {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.listaPlantios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cardPlantio {
+  display: flex;
+  flex-direction: row !important;
+  background-color: #3b3b3b !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cardPlantio:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(69, 160, 73, 0.2);
+}
+
+.cardEsquerda {
+  width: 40%;
+  padding: 0 !important;
+  position: relative;
+}
+
+.cardEsquerda img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
+}
+
+.cardEsquerda::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  border-radius: 5px 0 0 5px;
+}
+
+.culturaImage {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  border-radius: 5px !important;
+  border: 2px solid #fff;
+}
+
+.card-title-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.cardDireita {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.cardDireita img {
+  max-height: 100%;
+  max-width: 25%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.culturaContainer {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.culturaContainer h5 {
+  margin: 10px 0;
+  color: #99cd85;
+  font-size: 1.2rem;
+}
+
+.descricaoContainer h5 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #99cd85;
+}
+
+.descricaoText {
+  color: #fff;
+}
+
+.cardDireita .card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.btnContainer {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.cardDireita button {
+  width: 60%;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cardDireita button:hover {
+  background-color: #45a049;
+}
+
+
+.semPlantio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semPlantio:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.semPlantioText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.divSemPlantio{
+  width: 90%;
+}
+
+.divIcone{
+  display: flex;
+  width: 10%;
+  justify-content: flex-start;
+}
+
+.icone {
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  color: #4caf50;
+}
+
+.semPlantio a {
+  color: #4caf50;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.semPlantio a:hover {
+  color: #388e3c;
+}

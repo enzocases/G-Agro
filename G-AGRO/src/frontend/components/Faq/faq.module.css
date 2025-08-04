@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #99cd85;
+  --secondary-color: #1a2024;
+  --background-color: #f4f4f4;
+  --text-color: #fafafa;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq h2{
+    color: #99cd85;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.faqItem {
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.faqItem:hover h3{
+  color: #99cd85;
+  transition: 0.3 ease;
+}
+
+.faqItem h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: white;
+  
+}
+
+.faqItem.active h3::after{
+  content: ""; 
+  display: block; 
+  width: 65%; 
+  height: 1px; 
+  background-color: var(--primary-color); 
+  margin-top: 10px; 
+}
+
+.faqItem p {
+  margin: 0;
+  padding-top: 1rem;
+  display: none;
+  transition: 0.3 ease;
+}
+
+.faqItem.active p {
+  display: block;
+  color: white;
+  transition: 0.3 ease;
+}
+

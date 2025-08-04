@@ -1,0 +1,429 @@
+.main {
+  background-color: lightgray;
+}
+
+:root {
+  --primary-color: #99cd85;
+  --secondary-color: #121212;
+  --background-color: #f4f4f4;
+  --text-color: #fafafa;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  overflow: hidden;
+  /*background-image: linear-gradient(#79a785, #3c4e3c);*/
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.section {
+  background: #1a2024;
+  border: 1px solid #1a2024;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Secao Banner //////////////////////////////////*/
+/*
+   .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    filter: blur(10px);
+    background-image: url('img/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../imgs/banner2.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.banner h1,
+.banner p,
+.banner button {
+  position: relative;
+  z-index: 2;
+  color: #fafafa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.banner hr {
+  display: flex;
+  height: 2px;
+  width: 70%;
+  color: #99cd85;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.banner button {
+  position: relative;
+  z-index: 2;
+  width: 20%;
+  padding: 10px 20px;
+  margin-top: 150px !important;
+  font-size: 1.2rem;
+  background-color: #99cd85;
+  color: #fafafa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #88b475;
+  transform: scale(1.05);
+}
+
+.banner:hover h1,
+.banner:hover p {
+  transform: scale(1.1);
+  color: #99cd85;
+  opacity: 0.9;
+}
+
+/* Secao Beneficios //////////////////////////////////*/
+
+.secaoBeneficios {
+  padding: 80px 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+.secaoBeneficios h2 {
+  text-align: center;
+  color: #99cd85;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+/* Benefício Item */
+.beneficioItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.beneficioItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Imagem com gradiente */
+.img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 10px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8));
+  z-index: 1; 
+  pointer-events: none;
+}
+
+/* Texto */
+.texto {
+  width: 50%;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  color: #99cd85;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 20px 0;
+  color: #d1d1d1;
+}
+
+.botao {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #121212;
+  background-color: #99cd85;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+
+.botao:hover {
+  background-color: #81b06e;
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 12px;
+}
+
+/*Secao Depoimentos //////////////////////////////////*/
+
+.secaoDepoimento {
+  background-color: #121212; /* Fundo escuro */
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.secaoDepoimento h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f9f9f9;
+}
+
+/* Layout da seção */
+.containerDepoimentos {
+  
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Título e descrição */
+.depoimentos {
+  max-width: 100%;
+  justify-content: center;
+}
+
+.titleDepoimentos {
+  font-size: 3rem !important;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 60px !important;
+}
+
+.depoimentos p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.depoimentos button {
+  background-color: #ffc107;
+  color: #111;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos dos cards */
+.clientes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+  gap: 30px;
+  flex: 1;
+  width: 100%;
+}
+
+.cliente {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.cliente:hover {
+  transition: 0.3s ease;
+  transform: scale(1.03);
+}
+
+.clienteImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+
+.descricaoCliente span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.notaAvaliacao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.notaAvaliacao .star {
+  color: #ffc107;
+}
+
+.clienteText {
+  font-size: 14px;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+/* Estilos adicionais */
+.depoimentoTop {
+  flex: 1;
+}
+
+.depoimentoBottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+
+/*Secao Sobre //////////////////////////////////*/
+
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #121212;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.sobre img {
+  width: 45%;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sobre div {
+  max-width: 50%;
+  color: #fafafa;
+}
+
+.sobre h2 {
+  color: #99cd85;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  margin-left: 0;
+  text-transform: uppercase;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.sobreButton {
+  background-color: #99cd85;
+  color: #1a2024;
+  padding: 10px 20px;
+  width: 20%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sobreButton:hover {
+  background-color: #88b475;
+  transform: scale(1.05);
+}
+
+.container hr{
+  color: #99cd85;
+}
+
+

@@ -1,0 +1,16 @@
+.profileContainer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profileDetails {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }

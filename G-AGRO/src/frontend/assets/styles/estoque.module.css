@@ -1,0 +1,725 @@
+.main {
+  min-height: 100vh;
+  background-color: #333;
+}
+
+
+
+
+
+
+/* Secao de Sem Produtos //////////////////////////////////////*/
+
+.semProdutos, .semConsumos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3); 
+  border: 1px solid rgba(76, 175, 80, 0.5); 
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semProdutos:hover, .semConsumos:hover{
+  transform: scale(1.01); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.semProdutosText, .semConsumosText{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5; 
+  margin: 0;
+}
+
+.icone {
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+
+
+
+/* Estilo para Label, Input, TextArea //////////////////////////////////////*/
+
+.label {
+  display: block;
+  margin-top: 10px;
+  color: #FAFAFA;
+  margin-bottom: 5px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  transition: 0.5s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #adadad !important;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #99cd85;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+
+
+
+
+
+
+
+
+
+/*  Menu  /////////////////////////////////////////////////////////*/
+
+.menu {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+  align-items: center;
+}
+
+.menuEsquerda {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  gap: 20px;
+  border-right: 2px solid #444;
+  padding: 0 5px 0 5px;
+}
+
+.menuDireita {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+.menuItem{
+  position: relative;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transition: 0.4s ease;
+  background-color: #333;
+  width: 50%;
+}
+
+.menuItem:hover {
+  border: 1px solid rgba(76, 175, 80, 0.7);
+  color: #4caf50;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.4s ease;
+}
+
+.menuItem:hover a {
+  color: #99cd85;
+  transition: 0.4s ease;
+}
+
+.btnPesquisar {
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menuItem a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Dropdown Menu Filtrar ///////////////////////////////*/
+
+.filtrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s ease-out;
+  position: relative;
+}
+
+.filtrar:hover {
+  background-color: #99cd85;
+  transition: 0.3s ease-in;
+}
+
+.iconeFiltrar {
+  margin-right: 10px;
+}
+
+.dropdownFiltrar {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.dropdownFiltrar.show {
+  display: block;
+}
+
+.dropdownFiltrar label {
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.inputFiltrar {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  transition: 0.5s;
+}
+
+.inputFiltrar::placeholder {
+  color: #ccc;
+}
+
+.inputFiltrar:focus {
+  outline: none;
+  border-color: #99cd85;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btnFiltrarAplicar {
+  width: 100%;
+  padding: 8px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnFiltrarAplicar:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+/* BTN Pesquisar ///////////////////////////////////*/
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.inputPesquisa {
+  border-radius: 5px 0 0 5px;
+  height: 45px;
+}
+
+.divInputPesquisa {
+  margin: 0;
+}
+
+.divBtnPesquisa {
+  margin: 0;
+}
+
+.btnPesquisar {
+  background-color: #28a745;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  max-height: auto;
+  align-items: center;
+  height: 45px;
+  transition: 0.3s ease-out;
+}
+
+.btnPesquisar:hover {
+  background-color: #99cd85;
+  transition: 0.3s ease-in;
+}
+
+
+
+
+
+
+
+
+/* Estilo para a Area com Produtos carregados ////////////////////*/
+
+.secaoProdutos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: center;
+ gap: 10px;
+}
+
+.tipoContainer {
+  position: relative;
+  background: #333;
+  border-radius: 5px;
+  border: 1px solid rgba(153, 205, 133, 0.2);
+  padding: 15px;
+  width: 80%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tipoContainer:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tipoHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fffff0;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.tipoIcone {
+  font-size: 1.5em;
+  color: #99cd85;
+}
+
+
+.barrasContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 15px 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.barrasContainer.ativo {
+  max-height: 1000px; 
+  opacity: 1;
+}
+
+.barraPrincipal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.barraPrincipal:hover{
+  border-color: #28a745;
+  transform: translateY(-3px);
+}
+
+.barraPrincipal.expandido {
+  flex-direction: column;
+  background-color: #333;
+  border: 1px solid #555;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+}
+
+.barraPrincipal.expandido:hover {
+  border-color: #28a745;
+  transform: translateY(-3px);
+}
+
+.produtoTitulo {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #99cd85;
+}
+
+.infoEsquerda {
+  display: flex;
+  align-items: center;
+  width: 70%; 
+  gap: 10px;
+}
+
+.infoDireita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%; 
+  gap: 10px;
+}
+
+.btnConsumir {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #333;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  padding: 7px 0px;
+  margin: 0 !important;
+}
+
+.btnConsumir a{
+  font-size: 0.9rem ;
+}
+
+.btnConsumir:hover{
+  border: 1px solid rgba(76, 175, 80, 0.7);
+  color: #4caf50;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.4s ease;
+}
+
+
+.produtosLista {
+  display: grid;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  background-color: #333;
+  border-radius: 8px;
+  transition: all 0.3s;
+  margin-top: 10px;
+  justify-content: center; 
+}
+
+
+.produtoImagem {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.produtoInfo {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.produtoDescricao,
+.produtoPreco,
+.produtoFornecedor {
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.produtoQuantidade {
+  font-size: 0.9em;
+  color: #aaa;
+  margin: 0 !important; 
+}
+
+.produtoButton {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-size: 0.85em;
+  transition: background-color 0.3s;
+}
+
+.produtoButton:hover {
+  background-color: #0056b3 !important;
+  transition: 0.3s;
+}
+
+.btnexcluir, .btnedit{
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border: 1px solid #ccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px 25px;
+}
+
+
+.btnedit{
+  border: 1px solid #4caf50;
+  color: #4caf50;
+}
+
+.btnexcluir {
+  border: 1px solid #ff6961;
+  color: #ff6961;
+}
+
+.btnexlcuir:hover, .btnedit:hover {
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-color: #99cd85; 
+}
+
+.qntdAbaixo{
+  color: #ff6961 !important;
+}
+
+
+
+
+
+/* Seção Graficos  ///////////////////////////////////////////////////////////*/
+
+.secaoGraficos {
+  display: flex;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menuLateral {
+  width: 25%;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menuLateral h3 {
+  color: #99cd85;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.menuLateral ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuLateral ul li {
+  margin-bottom: 10px;
+}
+
+.menuLateral ul li button {
+  width: 100%;
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menuLateral ul li button:hover {
+  background-color: #28a745;
+}
+
+.graficoContainer {
+  width: 75%;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.graficoTitulo {
+  color: #99cd85;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.select{
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  transition: 0.5s;
+  resize: none;
+}
+
+.select:hover {
+  transition: 0.3s ease;
+  border: 1px solid rgba(153, 205, 133, 0.5);
+}
+
+
+
+.option{
+  background-color: #2c2c2c !important;
+  color: #fff !important;
+  
+}
+
+
+/* Seção Historico Consumos  ///////////////////////////////////////////////////////////*/
+
+.secaoHistoricoConsumo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+}
+
+.historicoConsumoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  max-height: 100%;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.historicoConsumoContainer.ativo {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.cardConsumo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #333;
+  border-radius: 5px;
+  border: 1px solid rgba(153, 205, 133, 0.2);
+  padding: 15px;
+  min-width: 12rem;
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cardConsumo:hover {
+  transform: translateY(-3px);
+}
+
+.consumoTitulo {
+  font-size: 14px;
+  font-weight: bold;
+  color: #99cd85;
+  margin-bottom: 4px;
+}
+
+.consumoConteudo{
+  display: flex;
+  gap: 15px; 
+}
+
+.consumoText {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.btnVerHistorico{
+  background-color: #333;
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  margin-top: 50px !important;
+  margin-bottom: 50px;
+}
+
+.btnVerHistorico:hover{
+  color: #99cd85;
+  border-color: #99cd85;
+  transition: 0.3s;
+}
+
+.labelHistorico{
+  margin-right: 10px;
+}
+

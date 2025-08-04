@@ -1,0 +1,49 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1.5rem; 
+    background-color: #3a3a3a;
+    width: 100%;
+    color: #99cd85;
+    font-size: medium;
+   
+}
+
+.footer {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 1rem;
+    border: none !important;
+    background-color: #333 !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btnclose, .btndelete{
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: 1px solid #ccc;
+}
+
+.btnclose{
+    border: 1px solid #ccc;  
+    color: #ccc;
+}
+
+.btndelete{
+    border: 1px solid #ff6961;
+    color: #ff6961;
+}
+
+.btnclose:hover, .btndelete:hover {
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-color: #99cd85; 
+}

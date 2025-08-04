@@ -1,0 +1,129 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.modalButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estilo do botão Editar */
+.editarButton {
+    color: #28a745; 
+    border: 2px solid #28a745;
+}
+
+.editarButton:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Estilo do botão Fechar */
+.fecharButton {
+    color: #ccc; 
+    border: 2px solid #ccc;
+}
+
+.fecharButton:hover {
+    background-color: rgba(204, 204, 204, 0.1);
+}
+
+/* Estilo do botão Excluir */
+.excluirButton {
+    color: #ff4d4d; 
+    border: 2px solid #ff4d4d;
+}
+
+.excluirButton:hover {
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+
+
+.label {
+    display: block;
+    margin-top: 10px;
+    color: #99cd85;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    transition: 0.5s;
+    resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #adadad !important;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #99cd85;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.select{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    transition: 0.5s;
+    resize: none;
+}
+
+
+.option{
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+    
+}
+
+
+
+

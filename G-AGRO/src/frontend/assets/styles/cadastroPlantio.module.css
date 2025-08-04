@@ -1,0 +1,355 @@
+.main {
+  background-color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.mapContainer {
+  margin: 20px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #99cd85 !important;
+  font-weight: bold;
+}
+
+.infoContainer,
+.plantioContainer {
+  margin-top: 20px;
+}
+
+h2 {
+  display: flex;
+  margin-bottom: 10px;
+  color: #99cd85 !important;
+}
+
+.subtitulo {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+  color: #FAFAFA;
+  margin-bottom: 5px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+  transition: 0.5s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #adadad !important;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #99cd85;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.btnSalvar {
+
+  padding: 10px 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.divBtn {
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.btnSalvar:hover {
+  background-color: #45a049;
+}
+
+
+
+
+/*       Estilo para a Area sem Culturas Carregadas ////////////////////*/
+.semTerreno, .semCultura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semTerreno:hover, .semCultura:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.semTerrenoText, .semCulturaText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.divSemCultura{
+  width: 90%;
+}
+
+.divIcone{
+  display: flex;
+  width: 10%;
+  justify-content: flex-start;
+}
+
+.icone {
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  color: #4caf50;
+}
+
+
+
+.semCultura a,
+.semTerreno a {
+  color: #4caf50;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.semCultura a:hover,
+.semTerreno a:hover {
+  color: #388e3c;
+}
+
+
+/*     Estilo para a Area com Culturas carregadas ////////////////////*/
+
+
+.culturasSection,
+.terrenosSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.culturasGrid,
+.terrenosGrid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #333;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, transform 0.2s;
+  position: relative;
+  color: #fff;
+}
+
+.card:hover {
+  border-color: #28a745;
+  transform: translateY(-5px);
+}
+
+.card.selected {
+  border-color: #28a745;
+}
+
+.cardImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  margin: 8px 0 4px;
+}
+
+.cardDescription {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.cardButton {
+  padding: 8px 16px;
+  background-color: #333 !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  transition: background-color 0.3s;
+}
+
+.cardButton:hover {
+  background-color: #0056b3 !important;
+  transition: 0.3s;
+}
+
+
+
+/*    SideBar  ////////////////////////////////*/
+
+
+.sidebarButtonContainer {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.btnCadastrarTerreno {
+  background-color: #333 !important;
+  color: #fff;
+  padding: 13px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnCadastrarTerreno:hover {
+  color: #99cd85;
+  border-color: #99cd85;
+  transition: 0.3s;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: #333;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.sidebarOpen {
+  right: 0;
+}
+
+.sidebar h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  margin: 0 !important;
+  padding-right: 10px;
+  flex-grow: 1;
+  width: 80%;
+}
+
+.headerSidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+
+.closeSidebarButton {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #99cd85;
+  padding: 0;
+  margin: 0 !important;
+  width: 10%;
+}
+
+.submitButton {
+  background-color: #99cd85;
+  color: #333;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #85b86d;
+  transition: 0.3s;
+}
+
+option {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Botao Selecionar Terrenos Desocupados //////////////////////////////*/
+
+.btnFiltrarDesocupados{
+  background-color: #333;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+}
+
+.btnFiltrarDesocupados:hover{
+  color: #99cd85;
+  border-color: #99cd85;
+  transition: 0.3s;
+}
+
+.labelDesocupados{
+  margin-right: 10px;
+}
+
+.dataSection{
+  margin: 50px 0;
+}

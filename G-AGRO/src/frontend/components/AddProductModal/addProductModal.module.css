@@ -1,0 +1,102 @@
+/* Body Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Ajuste de espaçamento */
+    padding: 1.5rem; /* Extra padding para content spacing */
+    background-color: #3a3a3a;
+    width: 100%;
+    font-size: medium;
+}
+
+.blockTitle {
+    color: #99cd85;
+    background-color: #3a3a3a;
+    border: none !important;
+}
+
+/* Form Elements */
+
+.label {
+    font-size: 1.1rem; 
+    color: #99cd85;
+    margin-bottom: 0.2rem;
+}
+
+.select{
+    background-color: #2c2c2c !important;
+    margin-bottom: 0.8rem;
+    color: #fff !important; 
+    padding: 0.5rem;
+    border: none;
+    
+}
+
+
+.option{
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+    
+}
+
+.input {
+    background-color: #2c2c2c;
+    border: none;
+    color: #99cd85;
+    border-radius: 5px; /* Rounded input fields */
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem; /* Espaçamento inferior para inputs */
+    resize: none;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #3a3a3a !important;
+    border-top: 2px solid #99cd85; /* Top border for separation */
+    padding: 1rem;
+    border: none !important;
+}
+
+/* Buttons */
+ .btnedit, .btnclose {
+    background-color: #3a3a3a !important;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: 1px solid #ccc;
+}
+
+.btnclose{
+    border: 1px solid #ccc;  
+    color: #ccc;
+}
+
+.btnedit{
+    border: 1px solid #4caf50;
+    color: #4caf50;
+}
+
+.btnclose:hover, .btnedit:hover {
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-color: #99cd85; 
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas do input para Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

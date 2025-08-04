@@ -1,0 +1,63 @@
+/* Body Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Ajuste de espaçamento */
+    padding: 1.5rem; /* Extra padding para content spacing */
+    background-color: #3a3a3a;
+    width: 100%;
+    
+    font-size: medium;
+}
+.blockTitle {
+    color: #99cd85;
+    background-color: #3a3a3a;
+    border: none !important;
+}
+
+/* Form Elements */
+.label {
+    font-size: 1.1rem; /* Slightly larger labels */
+    color: #99cd85;
+    margin-bottom: 0.2rem;
+    
+}
+
+.input {
+    background-color: #2c2c2c;
+    border: none;
+    color: #99cd85;
+    border-radius: 5px; /* Rounded input fields */
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem; /* Espaçamento inferior para inputs */
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #3a3a3a !important;
+    border-top: 2px solid #99cd85; /* Top border for separation */
+    padding: 1rem;
+    border: none !important;
+}
+
+/* Buttons */
+ .btnedit {
+    background-color: #99cd85 !important;
+    text-transform: uppercase;
+    border: none !important;
+    border-radius: 5px; /* Rounded buttons */
+   
+    
+}
+
+.btnclose {
+    background-color: red !important ;
+    text-transform: uppercase;
+    border: none !important;
+}

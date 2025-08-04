@@ -1,0 +1,173 @@
+.culture-management-container {
+    padding: 20px;  
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.culture-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.culture-card:hover {
+    transform: scale(1.05);  
+}
+.culture-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.culture-card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.containerTitle{
+  display: flex;
+  margin-bottom: -10px;
+}
+
+.title{
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.h1{
+  margin: 0;
+}
+
+.containerBtn{
+  display: flex;
+  align-items: center ;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.btnAdd{
+    width: fit-content;
+}
+
+.btnAdd {
+  display: flex;
+  align-items: center ;
+  position: relative;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.btnAdd:hover{
+  border: 1px solid rgba(76, 175, 80, 0.7);
+  color: #4caf50;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.4s ease;
+}
+
+.btnAdd:hover a{
+  color: #99cd85;
+  transition: 0.4s ease;
+}
+
+.btnAdd a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.semCultura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 8px;
+  width: 50% !important;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semCultura:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.semCulturaText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.divSemCultura{
+  width: 90%;
+}
+
+.divIcone{
+  display: flex;
+  width: 10%;
+  justify-content: center;
+}
+
+.icone {
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  color: #4caf50;
+}
+  
+
+
+
+  .semCultura a {
+    color: #4caf50;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .semCultura a:hover {
+    color: #388e3c;
+  }
+
+
+.containerPrincipal {
+  background-color: #1a2024;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.secaoColheitas,
+.containerProdutos,
+.caixaTitulo {
+  background-color: #1a2024;
+  color: #fafafa;
+}
+
+.tipoContainer {
+  background: #273036;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #fafafa;
+}
+
+.tipoHeader {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #99cd85;
+  font-weight: bold;
+}
